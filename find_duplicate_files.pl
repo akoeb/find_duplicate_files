@@ -55,6 +55,7 @@ sub find {
 
 sub checksum_file {
     my ($file) = @_;
+    # TODO: maybe using a pure perl implementation could also be faster than starting a new process EVERY time
     my $checksum = qx{ /usr/bin/md5sum $file | awk '{ print \$1 }' };
     if ($CHECKSUMS{$checksum}) {
         print "Duplication found: $file, $CHECKSUMS{$checksum}\n";
