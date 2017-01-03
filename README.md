@@ -4,6 +4,7 @@
 
 Simple perl script that checksums all files in a starting directory, including the files in subdirectories. It then outputs all files with duplicate checksums.
 
+
 ## usage ##
 
 ./find_duplicate_files.pl <DIR_1> [... <DIR_N> ]
